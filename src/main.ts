@@ -28,10 +28,10 @@ async function bootstrap() {
   
   await app.startAllMicroservices();
 
-  await app.listen(3000);
+  await app.listen(process.env.PORT ?? 3000);
   
   logger.log('Microservice is listening');
-  logger.log('App is running on: http://localhost:3000');
+  logger.log('App is running on: http://localhost:3020');
   logger.log('Microservice is running on: amqp://localhost:5672');
 }
 bootstrap();
